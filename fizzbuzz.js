@@ -1,3 +1,5 @@
+'use strict'
+
 // function fizzbuzz(endNumber) {
 //   // Note: an array map would be preferred here, but we'll look at maps later
 //   //  (although you could investigate JS array maps yourself)
@@ -38,19 +40,18 @@
 // }
 
 /* Ignore the commented-out code below until Exercise 3 */
-let isBuzz = (n) => {
+const isBuzz = (n) => {
   return n % 5 === 0;
 }
 
-let isFizz = (n) => {
+const isFizz = (n) => {
   return n % 3 === 0;
 }
 
-let isFizzbuzz = (n) => {
-  return isFizz(n) && isBuzz(n);
-}
+const isFizzbuzz = (n) => isFizz(n) && isBuzz(n);
 
-let toFizzbuzz = (n) => {
+
+const toFizzbuzz = (n) => {
   if (isFizzbuzz(n)) {
     return 'FizzBuzz';
   }
@@ -66,7 +67,7 @@ let toFizzbuzz = (n) => {
 }
 
 let fizzbuzz = (number) => {
-  let sequence = [];
+  const sequence = [];
   for (let n = 1; n <= number; n++ ) {
     let nextFizzbuzzEntry = toFizzbuzz(n);
     sequence.push(nextFizzbuzzEntry);
